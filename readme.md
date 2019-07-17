@@ -18,5 +18,13 @@ instead to rescale the images to a standard size.
 I trained the CNN locally on an Apple MacBook Pro with 16 GB of RAM and 4 cores.  To limit the computational 
 time, I trained the network with a total of 1500 images per category.
 
-Interestingly, the validation accuracy is no better than random for these parameters:
-50%
+I was not getting good accuracy with the basic architecture, so made it a little more complex:
+- 2 convolutional layers
+- max pooling
+- convolutional layer
+- batch normalization
+- max pooling
+- 2 dense layers with relu activation
+- final dense layer with softmax
+
+Validation accuracy is at around 75% with a stride of 2.
