@@ -58,7 +58,7 @@ def main():
     model.add(keras.layers.InputLayer(input_shape=input_shape))
     model.add(keras.layers.convolutional.Conv2D(filters, filtersize, strides=(2, 2), padding='same',
                                                 data_format="channels_last", activation='relu'))
-    model.add(keras.layers.convolutional.Conv2D(32, (3,3), strides=(1, 1), padding='same', activation='relu'))
+    model.add(keras.layers.convolutional.Conv2D(32, (3,3), strides=(2, 2), padding='same', activation='relu'))
     model.add(keras.layers.MaxPooling2D(pool_size=(2,2)))
 
     model.add(keras.layers.convolutional.Conv2D(32, filtersize, strides=(2,2), padding='same', activation='relu'))
